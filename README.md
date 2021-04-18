@@ -1,4 +1,9 @@
 # Covid19Monitoring
+<form action="https://www.paypal.com/donate" method="post" target="_top">
+<input type="hidden" name="hosted_button_id" value="3JUUFBA5MUU4Q" />
+<input type="image" src="https://www.paypalobjects.com/en_US/IT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_IT/i/scr/pixel.gif" width="1" height="1" />
+</form>
 This is a small Python project for Covid19 monitoring. I used Python with Flask, MySql and Plotly library for graphs.
 
 The data used are those present at the following link: https://documenter.getpostman.com/view/10808728/SzS8rjbc
