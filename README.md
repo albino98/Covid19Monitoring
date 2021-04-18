@@ -16,7 +16,7 @@ The website instead consists of a single web page that allows you to select the 
 https://github.com/albino98/Covid19Monitoring/tree/main/covid19Monitoring
 
 Note that there is no python virtual env folder in the code repository, so you will need to create one. I used python 3.6.2.
-For the database create a new database named covid19 and import the file covid19.sql in the code folder.
+For the database create a new database named covid19 and import the file covid19.sql in the code folder. The database already contains some data.
 # Donations
 
 If you liked the project, offer me a coffee!
