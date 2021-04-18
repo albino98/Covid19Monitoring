@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="center">
+
+    <h3><a href="https://github.com/albino98/Covid19Monitoring" target="_blank">Visit my GitHub page!</a></h3>
+
+
+</div>
+<!--action="/createChart"-->
+<form method="GET" id="createChartForm" action="/createChart">
+
+    <div class="form-group">
+        <div class="center">
+            <h2 style="" >Country</h2>
+            <select name="country" class="form-control" value="{{ request.form['country'] }}" aria-label="Default select example">
+                <option value="None" selected>Open this select menu</option>
+                <option value="Italy">Italy</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="center">
+            <h2 style="" >Data Type</h2>
+            <select name="dataType"  class="form-control" value="{{ request.form['dataType'] }}" aria-label="Default select example">
+                <option value="None" selected>Open this select menu</option>
+                <option value="Confirmed">New Cases</option>
+                <option value="Deaths">Deaths</option>
+                <option value="Recovered">Recovered</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="center">
+            <button type="submit" class="btn btn-primary">Generate Chart</button>
+            <!-- type="submit" -->
+        </div>
+    </div>
+
+
+    <div id="resultChart">
+
+    </div>
+
+</form>
+</body>
+</html>

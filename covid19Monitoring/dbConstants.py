@@ -1,0 +1,2 @@
+NewConfirmed = "NewConfirmed"
+Confirmed = "Confirmed"
