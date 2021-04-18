@@ -12,6 +12,11 @@ The project consists of a task (executed once a day with the specific PythonAnyW
 
 The website instead consists of a single web page that allows you to select the data to be displayed, then python retrieves the data present on the db and finally the Plotly library generates the graphs.
 
+# Code
+https://github.com/albino98/Covid19Monitoring/tree/main/covid19Monitoring
+
+Note that there is no python virtual env folder in the code repository, so you will need to create one. I used python 3.6.2.
+
 # Donations
 
 If you liked the project, offer me a coffee!
