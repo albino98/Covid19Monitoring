@@ -29,3 +29,6 @@ If you liked the project, offer me a coffee
 
 ![Screenshot (8)](https://user-images.githubusercontent.com/63566699/115144640-0e22ff80-a04e-11eb-9c9e-c826c3730110.png)
 
+# License
+
+https://github.com/albino98/Covid19Monitoring/blob/769b9cff4c4f8d0114e73bbbd9a253069326bf6b/LICENSE
