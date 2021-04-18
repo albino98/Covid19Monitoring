@@ -16,7 +16,12 @@ The website instead consists of a single web page that allows you to select the 
 https://github.com/albino98/Covid19Monitoring/tree/main/covid19Monitoring
 
 Note that there is no python virtual env folder in the code repository, so you will need to create one. I used python 3.6.2.
-For the database create a new database named covid19 and import the file covid19.sql in the code folder. The database already contains some data.
+
+- For the database create a new database named covid19 and import the file covid19.sql in the code folder. The database already contains some data.
+- When creating a task on PythonAnyWhere it may not work properly. To solve the problem it may be useful to specify in the command the version of python to use. Here is my task and the link to the documentation: https://help.pythonanywhere.com/pages/ScheduledTasks/
+![Screenshot (9)_LI](https://user-images.githubusercontent.com/63566699/115157236-7abaf000-a088-11eb-9e38-890244444ee2.jpg)
+
+
 # Donations
 
 If you liked the project, offer me a coffee!
