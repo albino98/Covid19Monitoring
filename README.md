@@ -6,6 +6,8 @@ The data used are those present at the following link: https://documenter.getpos
 
 The whole project (including DB and tasks) is hosted on PythonAnyWhere at the following link: http://alby98.pythonanywhere.com/
 
+Plotly documentation: https://plotly.com/python/
+
 The project consists of a task (executed once a day with the specific PythonAnyWhere functionality) which retrieves the data via api and inserts them into the database.
 
 The website instead consists of a single web page that allows you to select the data to be displayed, then python retrieves the data present on the db and finally the Plotly library generates the graphs.
