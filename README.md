@@ -14,7 +14,7 @@ The website instead consists of a single web page that allows you to select the 
 
 # Donations
 
-If you liked the project, offer me a coffee
+If you liked the project, offer me a coffee!
 
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3JUUFBA5MUU4Q)
 
