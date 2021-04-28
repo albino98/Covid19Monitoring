@@ -1,50 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
 
+     $(document).ready(function () {
+        $("#createChartForm").submit(function (e) {
+            $("#btnFetch").attr("disabled", true);
+            $("#btnFetch").html(
+            `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+      );
+
+            return true;
+        });
+    });
+
+
+
+    </script>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 
-<div class="center">
-
-    <h3><a href="https://github.com/albino98/Covid19Monitoring" target="_blank">Visit my GitHub page!</a></h3>
 
 
-</div>
+
+            <h3><a href="https://github.com/albino98/Covid19Monitoring" target="_blank">Visit my GitHub page!</a></h3>
+
+
 <!--action="/createChart"-->
 <form method="GET" id="createChartForm" action="/createChart">
 
     <div class="form-group">
-        <div class="center">
+
+
             <h2 style="" >Country</h2>
-            <select name="country" class="form-control" value="{{ request.form['country'] }}" aria-label="Default select example">
-                <option value="None" selected>Open this select menu</option>
+
+            <select style="" name="country" class="form-control" value="{{ request.form['country'] }}" aria-label="Default select example">
+                <!-- <option value="None" selected>Open this select menu</option>
                 <option value="Italy">Italy</option>
                 <option value="Germany">Germany</option>
-                <option value="France">France</option>
+                <option value="France">France</option> -->
+
+                {{ countriesOptions }}
+
             </select>
-        </div>
-    </div>
+</div>
+
 
     <div class="form-group">
-        <div class="center">
+
+
             <h2 style="" >Data Type</h2>
-            <select name="dataType"  class="form-control" value="{{ request.form['dataType'] }}" aria-label="Default select example">
-                <option value="None" selected>Open this select menu</option>
+
+            <select style="" name="dataType"  class="form-control" value="{{ request.form['dataType'] }}" aria-label="Default select example">
                 <option value="Confirmed">New Cases</option>
                 <option value="Deaths">Deaths</option>
                 <option value="Recovered">Recovered</option>
             </select>
-        </div>
-    </div>
+</div>
+
 
     <div class="form-group">
-        <div class="center">
-            <button type="submit" class="btn btn-primary">Generate Chart</button>
-            <!-- type="submit" -->
-        </div>
+
+
+           <!-- <button type="submit" class="btn btn-primary">Generate Chart</button>-->
+            <button type="submit" id="btnFetch" class="btn btn-primary mb-2">Generates Graphs</button>
+
+
     </div>
 
 
@@ -53,5 +77,6 @@
     </div>
 
 </form>
+
 </body>
 </html>

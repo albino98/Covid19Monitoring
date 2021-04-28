@@ -15,6 +15,7 @@ Copyright 2021 Albino Cianciotti
 '''
 
 import urllib.request
+import urllib.parse
 import urlConstants
 import mysql.connector
 import os
@@ -29,11 +30,10 @@ def connectToMySql():
 
     mydb = mysql.connector.connect(
         host="localhost",
-        user="user",
+        user="root",
         # password="yourpassword",
         database="covid19"
     )
-
     return mydb
 
 def callApi(route):
@@ -105,7 +105,20 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return render_template('/home.html')
+    selectOptionsHtml = createCountriesHtmlSelect()
+    totalCases="-"
+    totalDeaths="-"
+    totalRecovered="-"
+    return render_template('/home.html', countriesOptions = selectOptionsHtml,totalCases=totalCases,totalDeaths=totalDeaths,totalRecovered=totalRecovered  )
+
+def createCountriesHtmlSelect():
+    countries = getCountries()
+    selectOptions = ""
+
+    for country in countries:
+        selectOptions = selectOptions +   "<option value='" + str(country[0]).lstrip().replace(" ","-") + "'>" + str(country[0]).lstrip() + "</option>\n"
+    selectOptionsHtml = Markup(selectOptions)
+    return selectOptionsHtml
 
 def prepareDataForPlot(queryResult, plotType):
     dataDictionary = {
@@ -147,7 +160,7 @@ def buildPlot(dataX, dataY, country, dataType, chartType):
     if chartType == 'bar':
         plot = plotly.offline.plot({
             "data": [plotly.graph_objs.Bar(x=dataX, y=dataY, marker=dict(color=lineColor))],
-            "layout": Layout(title=country + " - Daily " + dataType, height=1000, margin=dict(
+            "layout": Layout(title=country + " - " + dataType + " daily cases", height=1000, margin=dict(
                 l=50,
                 r=50,
                 b=100,
@@ -164,7 +177,7 @@ def buildPlot(dataX, dataY, country, dataType, chartType):
     elif chartType == 'linear':
         plot = plotly.offline.plot({
             "data": [Scatter(x=dataX, y=dataY,line=dict(color=lineColor, width=2))],
-            "layout": Layout(title=country + " - Total " + dataType, height=1000 ,margin=dict(
+            "layout": Layout(title=country + " - Total " + dataType + " cases", height=1000 ,margin=dict(
                 l=50,
                 r=50,
                 b=100,
@@ -196,6 +209,24 @@ def retrieveDataByCountry(country, dataToRetrieve):
     mydb.close()
     return result
 
+def getLastTotals(country):
+    mydb = connectToMySql()
+    mycursor = mydb.cursor()
+    query = "SELECT Confirmed,Deaths,Recovered FROM totalfromdayone WHERE Country= '" + country + "' ORDER BY Date DESC LIMIT 1"
+    mycursor.execute(query)
+    result = mycursor.fetchall()
+    mydb.close()
+    return result
+
+def getCountries():
+    mydb = connectToMySql()
+    mycursor = mydb.cursor()
+    query = "SELECT Country FROM countries;"
+    mycursor.execute(query)
+    countries = mycursor.fetchall()
+    mydb.close()
+    return countries
+
 def retrieveDataFromDayOneByCountry(country, field):
     print(country)
     print(field)
@@ -221,22 +252,51 @@ def createChart():
         print(country)
         print(dataType)
 
+        #aggiorno i dati dalle api
+        totalCountry = callApi(urlConstants.TOTAL_FROM_DAY_ONE_BY_COUNTRY + country)
+        saveTotalFromDayOne(totalCountry)
+        country = country.replace("-"," ")
         #creo il grafico di tipo plot dei dati giornalieri
         total = retrieveDataFromDayOneByCountry(str(country), str(dataType))
         dataDictionaryDaily = prepareDataForPlot(total, "daily")
-        dailyPlot = buildPlot(dataDictionaryDaily["Y"], dataDictionaryDaily["X"], country, dataType, 'bar')
-        #print(plot.__str__())
-        dailyCasesPlotHtml = Markup(dailyPlot)
+        if (not dataDictionaryDaily["Y"]) and (not dataDictionaryDaily["X"]):
+            print("no data")
+            noDataMessage = "<div class='alert alert-danger' role='alert'> Sorry, there is no data available at the moment for this country. </div>"
+            dailyCasesPlotHtml = Markup(noDataMessage)
+        else:
+            dailyPlot = buildPlot(dataDictionaryDaily["Y"], dataDictionaryDaily["X"], country, dataType, 'bar')
+            dailyCasesPlotHtml = Markup(dailyPlot)
 
         #creo il grafico di tipo lineare con i dati totali incrementali
         dataDictionaryIncremental = prepareDataForPlot(total, "incremental")
-        incrementalPlot = buildPlot(dataDictionaryIncremental["Y"], dataDictionaryIncremental["X"], country, dataType, 'linear')
-        incrementalPlotHtml = Markup(incrementalPlot)
-        return render_template("home.html", dailyCasesPlot=dailyCasesPlotHtml, incrementalPlot=incrementalPlotHtml)
+        if (not dataDictionaryIncremental["Y"]) and (not dataDictionaryIncremental["X"]):
+            print("no data")
+            noDataMessage = "<div class='alert alert-danger' role='alert'> Sorry, there is no data available at the moment for this country. </div>"
+            incrementalPlotHtml = Markup(noDataMessage)
+        else:
+            incrementalPlot = buildPlot(dataDictionaryIncremental["Y"], dataDictionaryIncremental["X"], country, dataType, 'linear')
+            incrementalPlotHtml = Markup(incrementalPlot)
+
+        selectOptionsHtml = createCountriesHtmlSelect()
+        #get totals for three bootstrap cards
+        totalConfirmed = "-"
+        totalDeaths = "-"
+        totalRecovered = "-"
+        lastTotals = getLastTotals(country)
+        if lastTotals[0][0] is not None:
+            print(lastTotals[0][0])
+            totalConfirmed = str(lastTotals[0][0])
+        if lastTotals[0][1] is not None:
+            print(lastTotals[0][1])
+            totalDeaths = str(lastTotals[0][1])
+        if lastTotals[0][2] is not None:
+            print(lastTotals[0][2])
+            totalRecovered = lastTotals[0][2]
+        return render_template("home.html", dailyCasesPlot=dailyCasesPlotHtml, incrementalPlot=incrementalPlotHtml, countriesOptions = selectOptionsHtml,totalCases = totalConfirmed, totalDeaths = totalDeaths, totalRecovered = totalRecovered)
 
 
 if __name__=='__main__':
     app.env = "debug"
     app.debug = True
 
-    app.run()
+app.run()
