@@ -26,6 +26,9 @@ Note that there is no python virtual env folder in the code repository, so you w
 
 If you liked the project, offer me a coffee!
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/U7U84GRKK)
+
+
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3JUUFBA5MUU4Q)
 
 ![Screenshot (7)](https://user-images.githubusercontent.com/63566699/115144604-dd42ca80-a04d-11eb-9896-1bd9be36c0e1.png)
