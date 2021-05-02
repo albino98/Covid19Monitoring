@@ -4,7 +4,7 @@ This is a small Python project for Covid19 monitoring. I used Python with Flask,
 
 The data used are those present at the following link: https://documenter.getpostman.com/view/10808728/SzS8rjbc
 
-**_The whole project (including DB and tasks) is hosted on PythonAnyWhere at the following link:_ http://alby98.pythonanywhere.com/**
+**_The whole project (including DB) is hosted on PythonAnyWhere at the following link:_ http://alby98.pythonanywhere.com/**
 
 Plotly documentation: https://plotly.com/python/
 
