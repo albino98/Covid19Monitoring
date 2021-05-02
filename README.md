@@ -14,7 +14,7 @@ The project consists of a database that contains the data to be displayed, a sin
 # Code
 https://github.com/albino98/Covid19Monitoring/tree/main/covid19Monitoring
 
-Note that there is no python virtual env folder in the code repository, so you will need to create one. I used python 3.6.2.
+Note that there is no python virtual env folder in the code repository, so you will need to create one. I used python 3.6.2. (https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html#env-requirements)
 
 For the database create a new database named covid19 and import the file covid19.sql in the code folder. The database already contains some data.
 
