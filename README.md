@@ -28,7 +28,7 @@ If you liked the project, offer me a coffee!
 
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3JUUFBA5MUU4Q)
 
-![Screenshot (7)](https://user-images.githubusercontent.com/63566699/115144604-dd42ca80-a04d-11eb-9896-1bd9be36c0e1.png)
+![image](https://user-images.githubusercontent.com/63566699/116815697-093a7180-ab5f-11eb-96f3-67e30c0e581d.png)
 
 
 ![Screenshot (5)](https://user-images.githubusercontent.com/63566699/115144610-e6339c00-a04d-11eb-9170-4f72f969ed53.png)
