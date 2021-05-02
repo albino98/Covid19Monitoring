@@ -11,21 +11,25 @@ body, html {
 
 .bg {
   background-image: url("static/white.png");
-
-  height: 100%;
+  overflow: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.dailyCasesDiv{
+    background-image: url("static/white.png");
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .center {
   margin: auto;
-  width: 50%;
+  width: 30%;
   border: 0px solid green;
   padding: 10px;
-  height: 35%;
-  text-align: center;
+  height: 100%%;
+  text-align: left;
 }
 
 .aligncenter{
@@ -38,7 +42,7 @@ body, html {
 .first {
     float: left;
     margin:auto;
-    padding-right: 10%;
+    padding-right: 5%;
     padding-top:10px;
 }
 
@@ -96,35 +100,38 @@ body, html {
     {% include 'createChart.html' %}
 
     <div class="first">
-  <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="static/white.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-text">Total Cases: </h5>
-          <h3 id="totalCasesValue" onchange="changeCounterValue()" class="card-text">{{ totalCases }}</h3>
-      </div>
-    </div>
+        <div class="card bg-light mb-3" style="width: 12rem;">
+  <div class="card-header" style="background-color: #007bff; color:white;">Total Cases:</div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <h3 id="totalCasesValue" onchange="changeCounterValue()" class="card-text">{{ totalCases }}</h3>
+  </div>
+</div>
 </div>
     <div class="first">
-        <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="static/white.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-text">Total Deaths: </h5>
-          <h3 id="totalDeathsValue" onchange="changeCounterValue()" class="card-text">{{ totalDeaths }} </h3>
-      </div>
-    </div>
+         <div class="card bg-light mb-3" style="width: 12rem;">
+  <div class="card-header" style="background-color: #007bff; color:white; " >Total Deaths:</div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <h3 id="totalDeathsValue" onchange="changeCounterValue()" class="card-text">{{ totalDeaths }} </h3>
+  </div>
+</div>
 </div>
 <div class="first">
-        <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="static/white.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-text">Total Recovered: </h5>
-          <h3 id="totalRecoveredValue" onchange="changeCounterValue()" class="card-text">{{ totalRecovered }} </h3>
-      </div>
-    </div>
+
+
+     <div class="card bg-light mb-3" style="width: 12rem;">
+  <div class="card-header" style="background-color: #007bff; color:white;">Total Recovered:</div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+     <h3 id="totalRecoveredValue" onchange="changeCounterValue()" class="card-text">{{ totalRecovered }} </h3>
+  </div>
 </div>
 </div>
 
 </div>
+</div>
+
     <div id="dailyCasesDiv" class="" >
         {{ dailyCasesPlot }}
 
