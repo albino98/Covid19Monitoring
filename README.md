@@ -37,8 +37,3 @@ For the database create a new database named covid19 and import the file covid19
 
 https://github.com/albino98/Covid19Monitoring/blob/769b9cff4c4f8d0114e73bbbd9a253069326bf6b/LICENSE
 
-# Donations
-
-If you liked the project offer me a coffee!
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/U7U84GRKK)
