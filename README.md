@@ -19,12 +19,7 @@ Note that there is no python virtual env folder in the code repository, so you w
 For the database create a new database named covid19 and import the file covid19.sql in the code folder. The database already contains some data.
 
 
-# Donations
 
-If you liked the project, offer me a coffee!
-
-
-[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3JUUFBA5MUU4Q)
 
 ![image](https://user-images.githubusercontent.com/63566699/116815697-093a7180-ab5f-11eb-96f3-67e30c0e581d.png)
 
