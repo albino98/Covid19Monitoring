@@ -18,6 +18,7 @@ Note that there is no python virtual env folder in the code repository, so you w
 
 For the database create a new database named covid19 and import the file covid19.sql in the code folder. The database already contains some data.
 
+:warning: **Attention**: the data is not official so it may not always be correct / updated with great precision.
 
 
 
