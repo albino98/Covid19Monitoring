@@ -1,3 +1,6 @@
+![Python](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white)
+
+
 # Covid19Monitoring
 
 This is a small Python project for Covid19 monitoring. I used Python with Flask, MySql and Plotly library for graphs.
