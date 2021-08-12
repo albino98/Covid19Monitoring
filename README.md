@@ -2,6 +2,13 @@
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
+
+<p align="center">
+  <img alt="logo" src="https://user-images.githubusercontent.com/63566699/129224789-6198792d-3f76-4582-b09a-9cfab37732b1.png">
+</p>
+
+
+
 # Covid19Monitoring
 
 This is a small Python project for Covid19 monitoring. I used Python with Flask, MySql and Plotly library for graphs.
