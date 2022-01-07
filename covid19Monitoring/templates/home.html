@@ -74,8 +74,11 @@ body, html {
 }
 
     function changeCounterValue(counterToChange) {
-            if (counterToChange.innerHTML.trim() != "" && counterToChange.innerHTML.trim() != "-"){
+            if (counterToChange.innerHTML.trim() != "" && counterToChange.innerHTML.trim() != "-" && counterToChange.innerHTML.trim() != 0){
                 animateValue(counterToChange, 0, counterToChange.innerHTML, 2000);
+            }
+            else {
+                counterToChange.innerHTML = "No data available";
             }
 
     }
