@@ -32,17 +32,14 @@ For the database create a new database named covid19 and import the file covid19
 :warning: **Attention**: the data is not official so it may not always be correct / updated with great precision.
 
 
+![immagine](https://user-images.githubusercontent.com/63566699/170736279-0cb7ff87-0f5f-45bf-a2c3-96c7a922219d.png)
 
-![image](https://user-images.githubusercontent.com/63566699/116815697-093a7180-ab5f-11eb-96f3-67e30c0e581d.png)
+![immagine](https://user-images.githubusercontent.com/63566699/170736505-7a831402-fd79-455d-8410-531cf98ed397.png)
 
-
-![Screenshot (5)](https://user-images.githubusercontent.com/63566699/115144610-e6339c00-a04d-11eb-9170-4f72f969ed53.png)
-
-
-![Screenshot (6)](https://user-images.githubusercontent.com/63566699/115144618-ecc21380-a04d-11eb-9d44-48e73c621242.png)
+![immagine](https://user-images.githubusercontent.com/63566699/170736580-6542986a-d40f-4652-bc88-e786e9d04012.png)
 
 
-![Screenshot (8)](https://user-images.githubusercontent.com/63566699/115144640-0e22ff80-a04e-11eb-9c9e-c826c3730110.png)
+
 
 # License
 
