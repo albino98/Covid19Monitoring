@@ -46,3 +46,4 @@ For the database create a new database named covid19 and import the file covid19
 
 License: [APACHE 2.0](https://github.com/albino98/Covid19Monitoring/blob/769b9cff4c4f8d0114e73bbbd9a253069326bf6b/LICENSE)
 
+
