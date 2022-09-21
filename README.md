@@ -46,6 +46,10 @@ For the database create a new database named covid19 and import the file covid19
 
 
 
+<a href="https://www.buymeacoffee.com/albyc">
+         <img alt="BuyMeACoffee" src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
+         style="height: 30px !important; width: 150px !important">
+      </a>
 
 # License
 
