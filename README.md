@@ -19,7 +19,7 @@ API documentation: [Covid19 API Postman Documentation](https://documenter.getpos
 
 Plotly documentation: [Plotly](https://plotly.com/python/).
 
-**_The whole project (including DB) is hosted on PythonAnyWhere at the following link:_ ![Covid19 Monitoring](http://alby98.pythonanywhere.com/)**
+**_The whole project (including DB) is hosted on PythonAnyWhere at the following link:_ [Covid19 Monitoring](http://alby98.pythonanywhere.com/)**
 
 The project consists of a database that contains the data to be displayed, a single web page and python that takes care of retrieving the data from the API, inserting them into the database and displaying them in the graphs through the Plotly library.
 
