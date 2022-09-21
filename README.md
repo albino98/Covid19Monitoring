@@ -13,11 +13,11 @@
 
 This is a small Python project for Covid19 monitoring. I used Python with Flask, MySql and Plotly library for graphs.
 
-The API used is: ![Covid19 API](https://covid19api.com/).
+The API used is: [Covid19 API](https://covid19api.com/).
 
-API documentation: ![Covid19 API Postman Documentation](https://documenter.getpostman.com/view/10808728/SzS8rjbc).
+API documentation: [Covid19 API Postman Documentation](https://documenter.getpostman.com/view/10808728/SzS8rjbc).
 
-Plotly documentation: ![Plotly](https://plotly.com/python/).
+Plotly documentation: [Plotly](https://plotly.com/python/).
 
 **_The whole project (including DB) is hosted on PythonAnyWhere at the following link:_ ![Covid19 Monitoring](http://alby98.pythonanywhere.com/)**
 
