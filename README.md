@@ -13,23 +13,29 @@
 
 This is a small Python project for Covid19 monitoring. I used Python with Flask, MySql and Plotly library for graphs.
 
-The data used are those present at the following link: https://documenter.getpostman.com/view/10808728/SzS8rjbc
+The API used is: ![Covid19 API](https://covid19api.com/).
 
-**_The whole project (including DB) is hosted on PythonAnyWhere at the following link:_ http://alby98.pythonanywhere.com/**
+API documentation: ![Covid19 API Postman Documentation](https://documenter.getpostman.com/view/10808728/SzS8rjbc).
 
-Plotly documentation: https://plotly.com/python/
+Plotly documentation: ![Plotly](https://plotly.com/python/).
+
+**_The whole project (including DB) is hosted on PythonAnyWhere at the following link:_ ![Covid19 Monitoring](http://alby98.pythonanywhere.com/)**
 
 The project consists of a database that contains the data to be displayed, a single web page and python that takes care of retrieving the data from the API, inserting them into the database and displaying them in the graphs through the Plotly library.
 
+**_Where does the data come from?_**
 
-# Code
-https://github.com/albino98/Covid19Monitoring/tree/main/covid19Monitoring
+As explained on the API website, the data is sourced from Johns Hopkins CSSE.
+
+## Code
+![Code Link](https://github.com/albino98/Covid19Monitoring/tree/main/covid19Monitoring)
 
 Note that there is no python virtual env folder in the code repository, so you will need to create one. I used python 3.6.2. (https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html#env-requirements)
 
 For the database create a new database named covid19 and import the file covid19.sql in the code folder. The database already contains some data.
 
-:warning: **Attention**: the data is not official so it may not always be correct / updated with great precision.
+
+
 
 
 ![immagine](https://user-images.githubusercontent.com/63566699/170736279-0cb7ff87-0f5f-45bf-a2c3-96c7a922219d.png)
