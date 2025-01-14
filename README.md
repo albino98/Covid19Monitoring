@@ -28,15 +28,21 @@ The project consists of a database that contains the data to be displayed, a sin
 As explained on the API website, the data is sourced from Johns Hopkins CSSE.
 
 ## Code
-![Code Link](https://github.com/albino98/Covid19Monitoring/tree/main/covid19Monitoring)
+[Code Link](https://github.com/albino98/Covid19Monitoring/tree/main/covid19Monitoring)
 
 Note that there is no python virtual env folder in the code repository, so you will need to create one. I used python 3.6.2. (https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html#env-requirements)
 
 For the database create a new database named covid19 and import the file covid19.sql in the code folder. The database already contains some data.
 
+The requirements file with the packages to install is the following: [Requirements.txt](https://github.com/albino98/Covid19Monitoring/blob/main/covid19Monitoring/requirements.txt)
 
+I exported the requirements via the pipreqs library with the following commands:
 
+```
+pip install pipreqs
 
+pipreqs /path/to/project
+```
 
 ![immagine](https://user-images.githubusercontent.com/63566699/170736279-0cb7ff87-0f5f-45bf-a2c3-96c7a922219d.png)
 
